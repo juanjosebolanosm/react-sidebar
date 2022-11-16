@@ -1,3 +1,3 @@
-import logo from "./logo.svg";
+import logo from "../assets/robot.png";
 
 export const logoSVG = logo;

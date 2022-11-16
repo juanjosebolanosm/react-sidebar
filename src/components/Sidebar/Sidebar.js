@@ -25,7 +25,11 @@ import {
     AiOutlineLeft,
     AiOutlineSearch,
     AiOutlineSetting,
+    AiOutlineTags,
+    AiOutlineUsergroupAdd,
 } from "react-icons/ai";
+
+
 import { MdLogout, MdOutlineAnalytics } from "react-icons/md";
 import { BsPeople } from "react-icons/bs";
 
@@ -66,7 +70,7 @@ const Sidebar = () => {
                 </SSearchIcon>
                 <input
                     ref={searchRef}
-                    placeholder="Search"
+                    placeholder="Buscar"
                     style={!sidebarOpen ? { width: 0, padding: 0 } : {}}
                 />
             </SSearch>
@@ -112,38 +116,38 @@ const Sidebar = () => {
 
 const linksArray = [
     {
-        label: "Home",
+        label: "Restaurantes",
         icon: <AiOutlineHome />,
         to: "/",
         notification: 0,
     },
     {
-        label: "Statistics",
-        icon: <MdOutlineAnalytics />,
-        to: "/statistics",
+        label: "Productos",
+        icon: <AiOutlineTags />,
+        to: "/productos",
         notification: 3,
     },
     {
-        label: "Customers",
+        label: "Encargados",
         icon: <BsPeople />,
-        to: "/customers",
+        to: "/manager",
         notification: 0,
     },
     {
-        label: "Diagrams",
-        icon: <AiOutlineApartment />,
-        to: "/diagrams",
+        label: "Domiciliarios",
+        icon: <AiOutlineUsergroupAdd />,
+        to: "/domiciliarios",
         notification: 1,
     },
 ];
 
 const secondaryLinksArray = [
     {
-        label: "Settings",
+        label: "Opciones",
         icon: <AiOutlineSetting />,
     },
     {
-        label: "Logout",
+        label: "Cerrar Sesión",
         icon: <MdLogout />,
     },
 ];
